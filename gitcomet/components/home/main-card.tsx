@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect, useRef } from "react"
 import { retrieveContributionData } from "@/modules/github-contributions"
+import CommitGraph from "./main-card/commit-graph"
 import ContributionCount from "./main-card/contribution-count"
 import { FaMailBulk, FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -25,11 +26,12 @@ const MainCard = () => {
     }, [])
 
     return (
-        <div className="w-full p-6 rounded-3xl bg-neutral-950 border border-neutral-700 grid gap-6 leading-relaxed">
-            <div>
+        <div className="w-full p-6 rounded-3xl bg-neutral-950 border border-neutral-700 flex flex-col gap-6 leading-relaxed">
+            <div className="flex-grow max-h-fit">
                 <h1 className="text-white text-4xl font-semibold">Building Robust Solutions with Ergonomic Design.</h1>
                 <p className="text-neutral-400">I engineer innovative solutions to enhance the human experience.</p>
                 <p className="text-neutral-400">My projects aim to create scalable software services that communicate seamlessly and deliver real-time benefits to users. </p>
+                <CommitGraph />
             </div>
 
             <div>
