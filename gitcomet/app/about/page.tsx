@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar"
 
 const AboutPage = () => {
     return (
-        <main className="flex min-h-screen">
+        <main className="flex min-h-screen bg-neutral-900">
             <Navbar />
         </main>
     )

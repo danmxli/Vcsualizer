@@ -18,9 +18,9 @@ const Navbar = () => {
     ];
 
     return (
-        <main className="w-52 bg-neutral-900">
+        <main className="w-52 bg-neutral-900 border-r border-neutral-700">
             <div className="m-6 pb-6 grid gap-6 justify-center border-b border-neutral-700">
-                <Image src={Headshot} alt="headshot" className="rounded-3xl shadow-2xl shadow-neutral-700" />
+                <Image src={Headshot} alt="headshot" className="rounded-3xl shadow-lg shadow-neutral-700" />
                 <div>
                     <h1 className="text-4xl font-semibold text-white">Dan Li</h1>
                     <h2 className="text-neutral-500 font-light">Builder | Engineer</h2>
@@ -39,7 +39,7 @@ const Navbar = () => {
                     </button>
                 ))}
             </div>
-            <div className='m-6'>
+            <div className='m-6 grid'>
                 <button className={`flex items-center gap-2 text-neutral-400 hover:text-white`}>
                     <IoIosPaper /> Resume
                 </button>
