@@ -1,4 +1,5 @@
 'use server'
+import fetch from 'node-fetch';
 const query = `
 query($userName:String!) {
   user(login: $userName){
