@@ -1,6 +1,23 @@
-import React, { useState, useEffect } from "react"
+'use client'
+import React, { useState, useEffect, useRef } from "react"
+import { retrieveContributionData } from "@/modules/github-contributions"
 
 const MainCard = () => {
+
+    const fetchExecuted = useRef(false)
+    const [contributionData, setContributionData] = useState<any>(null);
+
+    const getGithubContributions = async () => {
+        const data = await retrieveContributionData();
+        console.log(data)
+    }
+
+    useEffect(() => {
+        if (!fetchExecuted.current) {
+            getGithubContributions()
+            fetchExecuted.current = true
+        }
+    }, [])
     return (
         <div className="w-full p-6 rounded-3xl bg-neutral-950/50 border border-neutral-700 grid gap-6 leading-relaxed">
             <div>
