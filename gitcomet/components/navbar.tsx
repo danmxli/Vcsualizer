@@ -14,7 +14,7 @@ const Navbar = () => {
     const Menus = [
         { id: "home", title: "Home", href: "/", icon: <AiFillHome /> },
         { id: "projects", title: "All Projects", href: "/projects", icon: <AiFillDatabase /> },
-        { id: "about", title: "About Me", href: "/about", icon: <FaUserCircle /> }
+        // { id: "about", title: "About Me", href: "/about", icon: <FaUserCircle /> }
     ];
 
     return (

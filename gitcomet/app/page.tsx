@@ -4,9 +4,13 @@ import MainCard from '@/components/home/main-card'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-neutral-900">
+    <main className="flex bg-neutral-900">
       <Navbar />
-      <MainCard />
+      <div className='flex-1'>
+        <div className='h-screen overflow-y-scroll scrollbar-hide grid grid-cols-2 gap-6 p-6'>
+          <MainCard />
+        </div>
+      </div>
     </main>
   )
 }
