@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import MainCard from '@/components/home/main-card'
+import FeaturesCard from '@/components/home/current-features'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <div className='flex-1'>
         <div className='h-screen overflow-y-scroll scrollbar-hide grid grid-cols-2 gap-6 p-6'>
           <MainCard />
+          <FeaturesCard />
         </div>
       </div>
     </main>
