@@ -13,8 +13,7 @@ const CommitGraph: React.FC<DataProps> = ({ data }) => {
 
     return (
         <div className='mt-6 h-fit'>
-            <h1 className='text-center text-white text-sm'>Accumulative commit history by year, visualized.</h1>
-            <ResponsiveContainer width="100%" height={180}>
+            <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={result} margin={{ top: 0, right: 60, bottom: 0, left: 0 }}>
                     <XAxis dataKey="date" />
                     <YAxis />
@@ -22,6 +21,7 @@ const CommitGraph: React.FC<DataProps> = ({ data }) => {
                     <Bar dataKey="contributionCount" fill="#16a34a" />
                 </BarChart>
             </ResponsiveContainer>
+            <h1 className='text-center text-white text-sm'>Accumulative commit history by year, visualized.</h1>
         </div>
     );
 }
