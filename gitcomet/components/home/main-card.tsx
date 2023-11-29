@@ -49,7 +49,7 @@ const MainCard = () => {
                 <h1 className="text-white sm:text-4xl font-semibold">Contributor to Innovation.</h1>
                 <p className="text-xs sm:text-base text-neutral-400">Open to work and collaboration. Let&#39;s build something great together.</p>
                 <div className="flex gap-6 mt-6 ">
-                    <div className="flex items-center justify-center bg-neutral-900 hover:bg-neutral-950 shadow-inner shadow-neutral-700 p-3 sm:p-6 rounded-3xl">
+                    <div className="flex items-center justify-center bg-neutral-900 hover:bg-neutral-950 shadow-inner shadow-neutral-700 p-6 rounded-3xl">
                         <div>
                             <div className="flex items-center sm:text-2xl gap-3">
                                 <a className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl"><FaMailBulk /></a>

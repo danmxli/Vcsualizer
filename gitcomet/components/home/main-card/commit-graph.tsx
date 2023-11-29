@@ -18,7 +18,7 @@ const CommitGraph: React.FC<DataProps> = ({ data }) => {
                     <XAxis dataKey="date" />
                     <YAxis />
                     <Tooltip />
-                    <Bar dataKey="contributionCount" fill="#262626" />
+                    <Bar dataKey="contributionCount" fill="#525252" />
                 </BarChart>
             </ResponsiveContainer>
             <h1 className='text-white text-sm'>Accumulative commit history by year, visualized.</h1>
