@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { retrieveContributionData } from "@/modules/github-contributions"
 import ContributionCount from "./main-card/contribution-count"
 import { FaMailBulk, FaGithub, FaLinkedin } from "react-icons/fa";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 // https://github.com/recharts/recharts/issues/2272
 import dynamic from 'next/dynamic'
@@ -38,7 +39,9 @@ const MainCard = () => {
                 {currData ? (
                     <CommitGraph data={currData} />
                 ) : (
-                    <></>
+                    <div className="mt-6 text-white grid justify-center">
+                        <h1 className="flex items-center text-xl gap-3"><AiOutlineLoading3Quarters className="animate-spin" />loading chart...</h1>
+                    </div>
                 )}
 
             </div>
@@ -57,7 +60,7 @@ const MainCard = () => {
                     )}
                     <div className="flex items-center justify-center border p-6 rounded-3xl border-neutral-700">
                         <div className="">
-                            <h1 className="text-xl text-neutral-700">Total Contributions.</h1>
+                            <h1 className="text-xl text-neutral-700">Total contributions this year.</h1>
                             <div className="mt-3 flex items-center text-2xl gap-3">
                                 <a className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl"><FaMailBulk /></a>
                                 <a className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl"><FaGithub /></a>

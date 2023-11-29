@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar"
 import { useState, useEffect, useRef } from "react"
 import { retrieveRepoData } from "@/modules/github-repos"
 import ProjectCard from "@/components/projects/project-card"
+import CardSkeletons from "@/components/projects/card-skeletons"
 
 const ProjectsPage = () => {
     const fetchExecuted = useRef(false)
@@ -38,8 +39,7 @@ const ProjectsPage = () => {
                             ))}
                         </div>
                     ) : (
-                        <>
-                        </>
+                        <CardSkeletons />
                     )}
                 </div>
             </div>
