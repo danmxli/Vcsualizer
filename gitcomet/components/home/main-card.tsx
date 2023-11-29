@@ -30,6 +30,12 @@ const MainCard = () => {
         }
     }, [])
 
+    const Outreach = [
+        { id: 1, href: "mailto:danmuxingli@gmail.com", icon: <FaMailBulk /> },
+        { id: 2, href: "https://github.com/danmxli", icon: <FaGithub /> },
+        { id: 3, href: "https://www.linkedin.com/in/danli591/", icon: <FaLinkedin /> }
+    ]
+
     return (
         <div className="w-full flex flex-col gap-6 leading-relaxed">
             <div className="flex-grow max-h-fit">
@@ -52,9 +58,9 @@ const MainCard = () => {
                     <div className="flex items-center justify-center bg-neutral-900 hover:bg-neutral-950 shadow-inner shadow-neutral-700 p-6 rounded-3xl">
                         <div>
                             <div className="flex items-center sm:text-2xl gap-3">
-                                <a className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl"><FaMailBulk /></a>
-                                <a className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl"><FaGithub /></a>
-                                <a className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl"><FaLinkedin /></a>
+                                {Outreach.map((item) => (
+                                    <a key={item.id} className="bg-neutral-400 hover:bg-white hover:cursor-pointer p-3 rounded-3xl" href={item.href} target="_blank" rel="noopener noreferrer">{item.icon}</a>
+                                ))}
                             </div>
                             <footer className="mt-3 text-sm sm:text-base text-neutral-600">
                                 {currData ? (
