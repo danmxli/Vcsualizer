@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
                 <h1 className="text-xl text-white font-semibold">{nameWithOwner}</h1>
                 {description && <p className="text-sm text-neutral-400">{description}</p>}
                 {homepageUrl && (
-                    <a href={homepageUrl} target="_blank" rel="noopener noreferrer" className="text-indigo-300 hover:text-indigo-500 text-sm flex items-center gap-1">
+                    <a href={homepageUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white text-sm flex items-center gap-1">
                         <FaLink />Website
                     </a>
                 )}

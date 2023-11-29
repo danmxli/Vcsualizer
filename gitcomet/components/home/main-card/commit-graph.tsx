@@ -18,10 +18,10 @@ const CommitGraph: React.FC<DataProps> = ({ data }) => {
                     <XAxis dataKey="date" />
                     <YAxis />
                     <Tooltip />
-                    <Bar dataKey="contributionCount" fill="#16a34a" />
+                    <Bar dataKey="contributionCount" fill="#262626" />
                 </BarChart>
             </ResponsiveContainer>
-            <h1 className='text-center text-white text-sm'>Accumulative commit history by year, visualized.</h1>
+            <h1 className='text-white text-sm'>Accumulative commit history by year, visualized.</h1>
         </div>
     );
 }
