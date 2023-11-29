@@ -13,7 +13,7 @@ const CommitGraph: React.FC<DataProps> = ({ data }) => {
 
     return (
         <div className='mt-6 h-fit'>
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={result} margin={{ top: 0, right: 60, bottom: 0, left: 0 }}>
                     <XAxis dataKey="date" />
                     <YAxis />
