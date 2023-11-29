@@ -19,7 +19,6 @@ const MainCard = () => {
 
     const getGithubContributions = async () => {
         let user = await retrieveContributionData()
-        console.log(user.data.user.contributionsCollection.contributionCalendar.weeks)
         setCurrData(user.data.user.contributionsCollection.contributionCalendar.weeks)
         setYearCount(user.data.user.contributionsCollection.contributionCalendar.totalContributions)
     }
