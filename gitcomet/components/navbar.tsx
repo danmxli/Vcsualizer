@@ -40,9 +40,9 @@ const Navbar = () => {
                 ))}
             </div>
             <div className='m-6 grid'>
-                <button className={`flex items-center gap-2 text-neutral-400 hover:text-white`}>
+                <a className={`flex items-center gap-2 text-neutral-400 hover:text-white hover:cursor-pointer`} href="/Base_Resume_1.pdf" target="_blank" rel="noopener noreferrer">
                     <IoIosPaper /> Resume
-                </button>
+                </a>
             </div>
         </main>
     )
