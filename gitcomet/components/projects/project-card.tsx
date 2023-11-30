@@ -107,10 +107,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
                             <button onClick={() => {
                                 setRawReadme('')
                                 setOpenReadme(false)
-                            }} className="p-3 pl-12 pr-12 mb-6 bg-neutral-400 rounded-3xl font-semibold">
+                            }} className="p-1 pl-6 pr-6 mb-6 bg-neutral-400 rounded-3xl font-semibold">
                                 ESC
                             </button>
-                            <div className="text-white leading-relaxed max-h-96 overflow-scroll scrollbar-hide ">
+                            <div className="text-white text-sm sm:text-base leading-relaxed max-h-96 overflow-scroll scrollbar-hide ">
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                     {rawReadme}
                                 </ReactMarkdown>
