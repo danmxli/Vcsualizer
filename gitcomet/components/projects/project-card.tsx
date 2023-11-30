@@ -103,13 +103,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
                     </a>
                 </div>
                 {openReadme && (
-                    <div className="fixed inset-0 flex items-center justify-center">
+                    <div className="fixed inset-0 flex items-center justify-center bg-neutral-900/50 backdrop-blur">
                         <div className="m-3 bg-neutral-900 w-9/12 sm:max-w-2xl shadow-inner shadow-neutral-700 p-6 rounded-3xl">
                             <button onClick={() => {
                                 setRawReadme('')
                                 setOpenReadme(false)
-                            }} className="p-1 pl-6 pr-6 mb-6 bg-neutral-400 rounded-3xl font-semibold">
-                                ESC
+                            }} className="p-1 pl-6 pr-6 mb-6 bg-neutral-950 text-neutral-400 hover:text-white rounded-3xl shadow-inner shadow-neutral-700">
+                                <code>Close README.md</code>
                             </button>
                             <div className="customHtmlStyles leading-relaxed max-h-96 overflow-scroll scrollbar-hide">
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
