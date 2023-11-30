@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from "remark-gfm";
 import { FaLink, FaUserCircle, FaStar, FaGithub } from "react-icons/fa";
 import { FaCodeFork } from "react-icons/fa6";
+import "../../app/customs.scss"
 
 interface Repository {
     nameWithOwner: string;
@@ -103,14 +104,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
                 </div>
                 {openReadme && (
                     <div className="fixed inset-0 flex items-center justify-center">
-                        <div className="m-3 bg-neutral-900 max-w-screen-md shadow-inner shadow-neutral-700 p-6 rounded-3xl">
+                        <div className="m-3 bg-neutral-900 w-9/12 sm:max-w-2xl shadow-inner shadow-neutral-700 p-6 rounded-3xl">
                             <button onClick={() => {
                                 setRawReadme('')
                                 setOpenReadme(false)
                             }} className="p-1 pl-6 pr-6 mb-6 bg-neutral-400 rounded-3xl font-semibold">
                                 ESC
                             </button>
-                            <div className="text-white text-sm sm:text-base leading-relaxed max-h-96 overflow-scroll scrollbar-hide ">
+                            <div className="customHtmlStyles leading-relaxed max-h-96 overflow-scroll scrollbar-hide">
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                     {rawReadme}
                                 </ReactMarkdown>
