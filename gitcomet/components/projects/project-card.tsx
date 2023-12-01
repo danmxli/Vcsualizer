@@ -41,12 +41,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
 
     // get raw README.md from each project card
     const getReadme = async (repoName: String) => {
+        setOpenReadme(true)
         let rawResponse = await retrieveReadme(repoName)
         if (rawResponse.data.repository.readme !== null) {
             console.log(rawResponse.data.repository.readme)
             setRawReadme(rawResponse.data.repository.readme.text)
         }
-        setOpenReadme(true)
     }
 
     // set openReadme to false when hit escape key
@@ -112,9 +112,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
                                 <code>Close README.md</code>
                             </button>
                             <div className="customHtmlStyles leading-relaxed max-h-96 overflow-scroll scrollbar-hide">
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                    {rawReadme}
-                                </ReactMarkdown>
+
+                                {rawReadme !== '' ? (
+                                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                        {rawReadme}
+                                    </ReactMarkdown>
+                                ) : (
+                                    <div className="space-y-3">
+                                        <p className="animate-pulse p-3 bg-neutral-700 w-full rounded-3xl"></p>
+                                        <p className="animate-pulse p-3 bg-neutral-700 w-2/3 rounded-3xl"></p>
+                                        <p className="animate-pulse p-3 bg-neutral-700 w-1/3 rounded-3xl"></p>
+                                        <p className="animate-pulse p-3 bg-neutral-700 w-2/3 rounded-3xl"></p>
+                                        <p className="animate-pulse p-3 bg-neutral-700 w-1/3 rounded-3xl"></p>
+                                    </div>
+                                )}
                             </div>
 
                         </div>
