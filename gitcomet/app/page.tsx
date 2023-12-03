@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import MainCard from '@/components/home/main-card'
 import FeaturesCard from '@/components/home/current-features'
