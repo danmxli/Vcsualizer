@@ -4,9 +4,10 @@ import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recha
 
 interface DataProps {
     data: any
+    yearlyTotalCommits: number
 }
 
-const CommitGraph: React.FC<DataProps> = ({ data }) => {
+const CommitGraph: React.FC<DataProps> = ({ data, yearlyTotalCommits }) => {
 
     // Flatten data
     const result = data.flatMap((item: { contributionDays: any[]; }) => item.contributionDays.filter(day => day.contributionCount > 0));
@@ -21,7 +22,7 @@ const CommitGraph: React.FC<DataProps> = ({ data }) => {
                     <Bar dataKey="contributionCount" fill="#525252" />
                 </BarChart>
             </ResponsiveContainer>
-            <h1 className='text-white text-sm'>Accumulative commit history by year, visualized.</h1>
+            <h1 className='text-white text-xs sm:text-sm'>Accumulation of {yearlyTotalCommits} contributions in the last year, visualized.</h1>
         </div>
     );
 }
