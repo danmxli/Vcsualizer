@@ -1,14 +1,14 @@
 import Image from "next/image"
-import ProjectOneImage from "../../public/2023_11_28_seePickle.png"
-import ProjectTwoImage from "../../public/2023_11_29_conduify.png"
-import ProjectThreeImage from "../../public/2023_11_29_projects.png"
+import seePickleImage from "../../public/2023_11_28_seePickle.png"
+import ConduifyImage from "../../public/2023_12_10_conduify.png"
+import VcsualizerImage from "../../public/2023_11_29_projects.png"
 
 const FeaturesCard = () => {
 
     const featureList = [
-        { id: 1, title: "seePickle", href: "https://github.com/danmxli/seePickle", desc: "An all purpose productivity visualization tool.", img: ProjectOneImage },
-        { id: 2, title: "Conduify", href: "https://github.com/danmxli/Conduify", desc: "An AI powered interview guidance and evaluation platform.", img: ProjectTwoImage },
-        { id: 3, title: "Vcsualizer", href: "https://github.com/danmxli/Vcsualizer", desc: "A self regenerative developer portfolio with Github API integration.", img: ProjectThreeImage }
+        { id: 1, title: "Conduify", href: "https://github.com/danmxli/Conduify", desc: "An agent integrated interview guidance and resume analysis platform.", img: ConduifyImage },
+        { id: 2, title: "seePickle", href: "https://github.com/danmxli/seePickle", desc: "An all purpose productivity visualization tool.", img: seePickleImage },
+        { id: 3, title: "Vcsualizer", href: "https://github.com/danmxli/Vcsualizer", desc: "A self regenerative developer portfolio with Github API integration.", img: VcsualizerImage }
     ]
 
     return (
